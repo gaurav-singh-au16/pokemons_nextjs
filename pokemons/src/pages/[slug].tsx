@@ -17,7 +17,7 @@ const PokemonDetailPage = () => {
 
   const [QueryEvalution, { data: evalutionData }] = useLazyQuery(FETCH_EVALUTION, { variables: { name: slug } });
   let evalution = evalutionData ? evalutionData.pokemon : []
-  console.log(evalution)
+  // console.log(evalution)
   const showEvalutionFunction = () => {
     QueryEvalution()
     setShowEvalution(true)

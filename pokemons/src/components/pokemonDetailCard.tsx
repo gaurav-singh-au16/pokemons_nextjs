@@ -27,22 +27,22 @@ const PokemonDetailCard = (props: any) => {
                 </div>
                 <div className="text-gray-700 text-base mt-2">Type</div>
                 <div className="flex items-center">
-                    {pokemonData.length != 0 && pokemonData.types.map((type: string) => (
-                        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 bg-rose-700/[.12] ...">{type}</span>
+                    {pokemonData.length != 0 && pokemonData.types.map((type: string, i:any) => (
+                        <span key={i} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 bg-rose-700/[.12] ...">{type}</span>
 
                     ))}
                 </div>
                 <div className="text-gray-700 text-base mt-2">Weaknesses</div>
                 <div className="flex items-center">
-                    {pokemonData.length != 0 && pokemonData.weaknesses.map((weakness: string) => (
-                        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 bg-rose-700/[.12] ...">{weakness}</span>
+                    {pokemonData.length != 0 && pokemonData.weaknesses.map((weakness: string, i:any) => (
+                        <span key={i} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 bg-rose-700/[.12] ...">{weakness}</span>
 
                     ))}
                 </div>
                 <div className="text-gray-700 text-base mt-2">Resistance</div>
                 <div className="flex items-center">
-                    {pokemonData.length != 0 && pokemonData.resistant.map((resistance: string) => (
-                        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 bg-rose-700/[.12] ...">{resistance}</span>
+                    {pokemonData.length != 0 && pokemonData.resistant.map((resistance: string, i:any) => (
+                        <span key={i} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 bg-rose-700/[.12] ...">{resistance}</span>
 
                     ))}
                 </div>

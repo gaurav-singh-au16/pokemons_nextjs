@@ -5,7 +5,7 @@ const PokemonEvalution = (props: any) => {
 
     let evalutionData = props.data.evolutions
     let pokemon = props.pokemon
-    console.log(evalutionData)
+    // console.log(evalutionData)
     const detailPageNavigation = (pokemonName: string) => {
         Router.push(`/${pokemonName}`)
     }
@@ -18,21 +18,21 @@ const PokemonEvalution = (props: any) => {
                         <img src={pokemon.image} className='rounded-full border-8 border-indigo-500/100 h-40 w-40' />
                         <h1 className='text-gray-50 text-xl'>{pokemon.name} <span className='text-zinc-200 italic text-xl'>#{pokemon.number}</span></h1>
                         <div className="flex items-center mt-3">
-                            {pokemon.types.map((type: string) => (
-                                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-200 mr-2 mb-2 bg-rose-400">{type}</span>
+                            {pokemon.types.map((type: string, i: any) => (
+                                <span key={i} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-200 mr-2 mb-2 bg-rose-400">{type}</span>
 
                             ))}
                         </div>
                     </div>
                 </>
-                {evalutionData && evalutionData.map((data: any) => (
+                {evalutionData && evalutionData.map((data: any, i: any) => (
                     <>
-                        <div className='m-5 items-center cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110' onClick={() => detailPageNavigation(data.name)}>
+                        <div key={i} className='m-5 items-center cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110' onClick={() => detailPageNavigation(data.name)}>
                             <img src={data.image} className='rounded-full border-8 border-indigo-500/100 h-40 w-40' />
                             <h1 className='text-gray-50 text-xl'>{data.name} <span className='text-zinc-200 italic text-xl'>#{data.number}</span></h1>
                             <div className="flex items-center mt-3">
-                                {data.types.map((type: string) => (
-                                    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-200 mr-2 mb-2 bg-rose-400">{type}</span>
+                                {data.types.map((type: string, idx: any) => (
+                                    <span key={idx} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-200 mr-2 mb-2 bg-rose-400">{type}</span>
 
                                 ))}
                             </div>

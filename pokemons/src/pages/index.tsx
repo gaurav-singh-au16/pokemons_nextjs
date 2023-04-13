@@ -11,7 +11,7 @@ export default function Home() {
   let pokemonData = data ? data.pokemons : []
 
   const loadMorePokemons = () => {
-    console.log(fetchCount)
+    // console.log(fetchCount)
     setFetchCount(fetchCount => fetchCount + 20)
     // fetchCount = fetchCount+20
     RefetchPokemons()
