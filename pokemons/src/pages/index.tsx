@@ -18,15 +18,23 @@ export default function Home() {
   }
 
   return (
-    <>
 
-      <h1>This is HomePage</h1>
-      <PokemonCard
-        data={pokemonData}
-      />
-      <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded'
-        onClick={loadMorePokemons}
-      >Load More Pokemons</button>
+    <>
+      {!loading ?
+        <div>
+          <h1 className='text-3xl text-center m-5'>Pokemons (HomePage)</h1>
+          <PokemonCard
+            data={pokemonData}
+          />
+          <div className="container py-10 px-10 mx-0 min-w-full grid place-items-center">
+            <button className='bg-purple-900 text-white hover:bg-purple-400 font-bold py-2 px-4 mt-3 rounded items-center'
+              onClick={loadMorePokemons}
+            >Load More Pokemons</button>
+
+          </div>
+        </div> :
+        <h1 className='text-3xl text-center m-5'>Loading...</h1>}
     </>
+
   )
 }

@@ -53,4 +53,26 @@ export const FETCH_POKEMON = gql`
     }
   }
 `;
+export const FETCH_EVALUTION = gql`
+query pokemon($name: String){
+  pokemon(name: $name ){
+    id
+    name
+    evolutions{
+      id
+      number
+      name
+      classification
+      types
+      resistant
+      weaknesses
+      fleeRate
+      maxCP
+      
+      maxHP
+      image
+    }
+  }
+}
+`;
 

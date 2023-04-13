@@ -3,7 +3,7 @@ import React from 'react'
 const PokemonDetailCard = (props: any) => {
 
     let pokemonData = props.data
-    console.log(pokemonData)
+    // console.log(pokemonData)
     return (
         <div className="max-w-sm w-full lg:max-w-full lg:flex items-center justify-center mt-2">
             <img className="h-48 lg:h-auto lg:w-100 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" src={pokemonData.image} title="pokemon" />
@@ -28,21 +28,21 @@ const PokemonDetailCard = (props: any) => {
                 <div className="text-gray-700 text-base mt-2">Type</div>
                 <div className="flex items-center">
                     {pokemonData.length != 0 && pokemonData.types.map((type: string) => (
-                        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 bg-rose-700/[.06] ...">{type}</span>
+                        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 bg-rose-700/[.12] ...">{type}</span>
 
                     ))}
                 </div>
                 <div className="text-gray-700 text-base mt-2">Weaknesses</div>
                 <div className="flex items-center">
                     {pokemonData.length != 0 && pokemonData.weaknesses.map((weakness: string) => (
-                        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 bg-rose-700/[.06] ...">{weakness}</span>
+                        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 bg-rose-700/[.12] ...">{weakness}</span>
 
                     ))}
                 </div>
                 <div className="text-gray-700 text-base mt-2">Resistance</div>
                 <div className="flex items-center">
                     {pokemonData.length != 0 && pokemonData.resistant.map((resistance: string) => (
-                        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 bg-rose-700/[.06] ...">{resistance}</span>
+                        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 bg-rose-700/[.12] ...">{resistance}</span>
 
                     ))}
                 </div>
